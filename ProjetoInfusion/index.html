@@ -14,16 +14,17 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         
       <link rel="stylesheet" href="style/normalize.css">
+      <link rel="stylesheet" href="style/main.css">
       
     </head>
-    <body>
+    <body class="no-js">
         
-        <header>
-          <a href="index.html">INFUSION</a>
+        <header class="header">
+          <a href="index.html" class="logo-text">INFUSION</a>
           
-          <button>Menu</button>
+          <button style="display:none;" class="header__btnMenu">Menu</button>
           
-          <nav>
+          <nav class="header__nav">
             <ul>
               <li><a href="#">design folio</a></li>
               <li><a href="#">services</a></li>
@@ -35,28 +36,64 @@
           </nav>
         </header>
         
-        <section>            
+        <section class="hero">            
           <h1 class="hero__title">
             CUTTING EDGE <abbr title="Wordpress">WP</abbr> BUSINESS THEME
           </h1>
-          <p>Gutful of bottlo no dramas he's got a massive hooroo.</p>
-          <a href="#">BUY IT NOW</a>                      
+          <p class="hero__text">Gutful of bottlo no dramas he's got a massive hooroo.</p>
+          <a href="#" class="hero__btn">BUY IT NOW</a>                      
         </section>
 
         
-        <section>
-          <article>               
+        <section class="people-cards">
+          <article class="people-cards__card">               
 
-            <img src="img/c01.jpg" alt="Carousel Img">
+            <img src="img/c01.jpg" alt="Carousel Img" class="people-card__image">
             
-            <div>
-              <img src="img/teamsprite_01.png" alt="Carousel Img">
-            </div>
-            <div>
-              <h2>Lorem ipsum dolor sit amet consectetur</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
-            </div>
-          </article>            
+              <div class="people-cards__avatar">
+                <img src="img/teamsprite_01.png" alt="Carousel Img">
+              </div>
+              <div class="people-card__content">
+                <h2 class="people-cards__title">Lorem ipsum dolor sit amet consectetur</h2>
+                <p class="people-cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+              </div>
+          </article>     
+
+          <article class="people-cards__card">               
+
+            <img src="img/c02.jpg" alt="Carousel Img" class="people-card__image">
+            
+              <div class="people-cards__avatar">
+                <img src="img/teamsprite_02.png" alt="Carousel Img">
+              </div>
+              <div class="people-card__content">
+                <h2 class="people-cards__title">Lorem ipsum dolor sit amet consectetur</h2>
+                <p class="people-cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+              </div>
+          </article>           
+          
+            <img src="img/c03.jpg" alt="Carousel Img" class="people-card__image">
+            
+              <div class="people-cards__avatar">
+                <img src="img/teamsprite_03.png" alt="Carousel Img">
+              </div>
+              <div class="people-card__content">
+                <h2 class="people-cards__title">Lorem ipsum dolor sit amet consectetur</h2>
+                <p class="people-cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+              </div>
+          </article>           
+          
+            <img src="img/c04.jpg" alt="Carousel Img" class="people-card__image">
+            
+              <div class="people-cards__avatar">
+                <img src="img/teamsprite_04.png" alt="Carousel Img">
+              </div>
+              <div class="people-card__content">
+                <h2 class="people-cards__title">Lorem ipsum dolor sit amet consectetur</h2>
+                <p class="people-cards__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+              </div>
+          </article>           
+
         </section>
         
 
