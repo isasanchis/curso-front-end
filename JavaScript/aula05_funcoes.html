@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Lógica de Programação Javascript</title>
+        <meta charset="UTF-8">
+
+        <script>
+            //literal
+            function somar(n1, n2){
+                //corpo da funcao
+                return n1 + n2;
+            }
+
+            var soma = somar(10, 20);
+            console.log('Resultado: '+ soma);
+
+            somar.teste = 'propriedade da funcao';
+
+            console.log(somar.teste);
+
+            //funcao anonima dentro de uma variável
+            var teste = function(f){
+                f();
+            }; //precisa do ;
+
+            teste(function(){
+                console.log('funcao passada por parametro')
+            });
+
+            var x = 0;
+            var y; //undefined
+
+            function mostraX(){
+                var x = 10; // escopo local
+                y = 20; //como está sem uma variável atribuída, ela se torna parte do escopo global
+                console.log("mostra x: ", x)
+            }
+            mostraX()
+
+            console.log("mostra x: ", x);
+            console.log("mostra y: ", y);
+
+            //IIFE - funcao auto invocável
+            (function(){
+                'use strict';
+                var isValid = false;
+                console.log(isValid);
+
+                function somar(){
+                    console.log(arguments);
+                    var result = 0;
+                    var x = 0;
+
+                    while(arguments[x]){
+                        result += arguments[x];
+                        x++;
+                    }
+                    console.log('result: ', result);
+                }
+
+                somar(20, 20, 10, 30);
+            })()
+
+        </script>
+    </head>
+    <body>
+        <h1>Lógica de Programação Javascript</h1>
+    </body>
+</html>

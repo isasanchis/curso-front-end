@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Lógica de Programação Javascript</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Lógica de Programação Javascript</h1>
+
+        <script>
+            var numero=parseFloat(prompt('Digite um número'));
+
+            var indice = 1;
+
+            while(indice <= 1000){
+                document.write(numero + ' x '+ indice +' = '+(numero * indice) +' <br> ');
+
+                if(indice % 10 === 0 && indice > 0){
+                    document.write('<hr>');
+                }
+
+                indice = indice + 1;
+            }
+
+            document.write('saiu do loop');
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1>Javascript</h1>
+
+            <button id="btn1" onclick="clicar()">botao 1</button>
+            <button id="btn2">botao 2</button>
+            <button id="btn3" onclick="alert('mundo')">botao 3</button>
+
+            <div class="container">
+                <h1>propagação de eventos</h1>
+
+                <div id="d1" style="background: red; padding: 25px;">
+                    texto dentro da div
+                    <span style="background: yellow;">texto dentro da span</span>
+                </div>
+
+            </div>
+
+        </div>
+
+         <script>
+            var btn2 = document.getElementById('btn2');
+            var btn3 = document.getElementById('btn3');
+
+            btn2.onclick = clicar;
+
+            function clicar(){
+                alert('clicou');
+
+                return function(){
+                    alert('clicou 2');
+                }
+            }
+
+            btn3.addEventListener("click", function(){
+                alert('clicou com dom level 2')
+            })
+            btn3.addEventListener("click", function(){
+                alert('clicou com dom level 2 com outro evento')
+            })
+
+            btn3.onclick=function(){
+                alert('ola');
+                alert('mundo')
+            } 
+
+            var $d1 = document.querySelector('#d1');
+            var $d1Span = document.querySelector('#d1 span');
+
+            $d1.addEventListener('click', function(e){
+                console.log('click no $d1');
+                //e.stopPropagation();
+            }, false); //true para mudar a ordem dos eventos
+            $d1Span.addEventListener('click', function(){
+                console.log('click no $d1Span');
+            }, false);
+
+            document.addEventListener('click', function(e){
+
+                console.log('clicou no document');
+                console.log(e.currentTarget);
+                console.log(this); //elemento a qual foi atrelado o evento, neste caso, o document
+                console.log(e.target);
+                
+            }, false)
+            
+
+        </script>
+    </body>
+</html>

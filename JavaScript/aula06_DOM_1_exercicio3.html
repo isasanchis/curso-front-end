@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+
+        <input type="text" id="txtNome"><button onclick="escreve()">Só clica</button>       
+        <div id="msg"></div>
+        
+        <script>
+
+            var txtNome2 = document.querySelector('#txtNome');
+                
+            function escreve(){
+                var nome = txtNome2.value;
+                document.querySelector('#msg').innerHTML = "Bem-vindo, <b>" + nome + "</b>";
+
+                } //precisa ser na ordem, no momento certo, portanto, eu preciso aplicar a variável no momento em que eu clico (neste caso).
+
+            //text.Content é para textos dentro de tags
+            //innerHTML é para quando possui tags HTML dentro do elemento que eu estiver buscando
+            //forms é propriedade value, SEMPRE
+
+            //value: propriedade que recupera o valor de um campo de formulário
+        </script>
+    </body>
+</html>

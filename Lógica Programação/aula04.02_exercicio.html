@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Lógica de Programação Javascript</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Lógica de Programação Javascript</h1>
+
+        <button onclick="somar()">+</button>
+        <button onclick="subtrair()">-</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="dividir()">/</button>
+
+        <div id="output"></div>
+
+        <script>
+
+            var n = parseFloat(prompt('Digite um número'));
+
+            mensagem();
+
+            function mensagem(){
+                var output = document.querySelector('#output');
+                output.innerHTML = n;
+            }
+
+            function somar(){
+                var y = parseFloat(prompt('Digite outro número'));
+               n += y
+               mensagem();
+            }
+
+            function subtrair(){
+                var y = parseFloat(prompt('Digite outro número'));
+                n -= y;
+               mensagem();
+            }
+
+            function multiplicar(){
+                var y = parseFloat(prompt('Digite outro número'));
+                n *= y
+               mensagem();
+            }
+
+            function dividir(){
+                var y = parseFloat(prompt('Digite outro número'));
+                n /= y;
+               mensagem();
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+        <style>
+            .done{
+                text-decoration: line-through;
+                color: #555;
+            }
+        </style>
+
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1>Javascript</h1>
+
+            <input type="text" id="txtTask">
+            <button id="btn">Cadastrar tarefa</button>
+
+            <ul>
+                <li>estudar Javascript - DOM</li>
+                <li>estudar eventos em javascript</li>
+                <li>jogar video game</li>
+            </ul>
+
+        </div>
+
+        <script>
+
+            (function(){
+               'use strict';
+
+               var $ul = document.querySelector('ul');
+               var $lis = $ul.querySelectorAll('li');
+               var $txtTask = document.querySelector('#txtTask');
+               var $btn = document.querySelector ('#btn');
+
+               $btn.addEventListener('click', addTask);
+               $txtTask.addEventListener('keyup', function(e){
+                   if(e.keyCode === 13){
+                       addTask();
+                   }; //keycode é o código númerico da tecla
+               });
+
+               for(var i = 0;  i < $lis.length; i++){
+                   addEventListener($lis[i]);
+               }
+
+               function toggleDone(){
+                   this.classList.toggle('done');
+               }
+
+               function addTask(){
+
+                   var li = document.createElement('li');
+                   var text = document.createTextNode($txtTask.value); //texto temporário para inserir no DOM 
+
+                   li.appendChild(text); //pegando valor do texto e acrescentando na li
+
+                   $ul.appendChild(li); //qdo alterar o DOM vai ser automaticamente refletido na pág
+
+                   $txtTask.value= '';
+                   $txtTask.focus();
+
+                   addEvent(li);
+               }
+
+               function addEvent(li){
+                li.addEventListener('click', toggleDone);
+               }
+            
+            })()
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>pagina de exemplo de estrutura basica</title>
+        <!--o title otimiza o SEO, very much important-->
+        <meta charset="utf-8">
+        <meta name="author" content="Isabella">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, css3, tech">
+
+        <style>
+
+            @keyframes slide{
+                0%, 22%, 100%{
+                    transform: translateY(0);
+                }
+                25%, 47%{
+                    transform: translateY(-50vh);
+                }
+                50%, 72%{
+                    transform: translateY(-100vh);
+                }
+                75%, 97%{
+                    transform: translateY(-150vh);
+                }
+            }
+            body{
+                font-family: sans-serif;
+                color: white;
+                background: #1a1818;
+                margin: 0;
+            }
+
+            #slide-externo{
+                width: 80vw;
+                height: 50vh;
+                border: 10px solid white;
+                box-shadow: 0 0 10px black;
+                margin-left: 10vw;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+
+            #slide-interno{
+                width: 100%;
+                animation: slide 15s infinite cubic-bezier(.21,-0.32,.82,1.33);
+            }
+
+            #slide-interno img{
+                display: block;
+                height: 50vh;
+                width: 100%;
+                /* object-fit: cover; */
+            }
+        </style>
+    </head>
+    <body>
+            <h2>Animation - slideshow</h2>
+
+            <div id="slide-externo">
+                <div id="slide-interno">
+                    <img src="imagens/slide1.jpg" alt="dog 1">
+                    <img src="imagens/slide2.jpg" alt="dog 2">
+                    <img src="imagens/slide3.jpg" alt="dog 3">
+                    <img src="imagens/slide4.jpg" alt="dog 4">
+                </div>
+            </div>
+    </body>
+</html>

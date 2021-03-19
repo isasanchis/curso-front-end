@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>transforms</title>
+        <!--o title otimiza o SEO, very much important-->
+        <meta charset="utf-8">
+        <meta name="author" content="Isabella">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, css3, tech">
+
+        <style>
+
+            html, body{
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .div1{
+                width: 150px;
+                height: 50px;
+                background: lightcoral;
+                transform: translate(50%, 50%)
+            }
+
+            .div2{
+                width: 150px;
+                height: 50px;
+                background: lightskyblue;
+                position: relative;
+                left: 50%;
+            }
+
+            .div3{
+                width: 50%;
+                overflow: hidden;
+                border: solid 2px black;
+            }
+
+            .div3-interna{
+                background: lightgreen;
+                transform: translate(70%, 25px);
+            }
+
+            .div4{
+                width: 50%;
+                overflow: hidden;
+                border: solid 2px black;
+            }
+
+            .div4-interna{
+                background: lightgreen;
+                transform: rotate(-25deg);
+            }
+
+            .div5{
+                width: 50%;
+                overflow: hidden;
+                border: solid 2px black;
+            }
+
+            .div5-interna{
+                background: lightgreen;
+                transform: rotate(25deg);
+                transform-origin: left top;
+            }
+            .div6{
+                width: 50%;
+                overflow: hidden;
+                border: solid 2px black;
+            }
+
+            .div6-interna{
+                background: lightgreen;
+                transform: rotate(30deg) translate(30px);
+            }
+            .div7{
+                width: 50%;
+                overflow: hidden;
+                border: solid 2px black;
+            }
+
+            .div7-interna{
+                background: lightgreen;
+                transform: translate(50px) rotate(30deg);
+            }
+
+            .div8{
+                width: 100px;
+                height: 100px;
+                background: lightseagreen;
+                transform: skew(-30deg, 40deg)
+            }
+
+            .div9{
+                width: 100px;
+                height: 100px;
+                background: red;
+                transform: scale(.5) translateX(50%);
+                transition: transform .5s;
+            }
+            .div9:hover{
+                transform: scale(2);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <hr>
+        <div class="div3">
+            <div class="div3-interna">samuel l jackson motherfucker</div>
+            <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+        </div>
+
+        <hr>
+
+        <div class="div4">
+            <div class="div4-interna">samuel l jackson motherfucker</div>
+            <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+        </div>
+
+        <hr>
+
+        <div class="div5">
+            <div class="div5-interna">samuel l jackson motherfucker</div>
+            <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+        </div>
+        <hr>
+
+        <div class="div6">
+            <div class="div6-interna">samuel l jackson motherfucker</div>
+            <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+        </div>
+        <hr>
+
+        <div class="div7">
+            <div class="div7-interna">samuel l jackson motherfucker</div>
+            <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+        </div>
+
+        <hr>
+        <div class="div8">div8</div>
+        <div class="div9">div9</div>
+
+    </body>
+</html>

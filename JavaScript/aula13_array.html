@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+        
+    </head>
+
+    <body>
+        <h1>Javascript</h1>
+
+        <script>
+
+          //construtor var arr = new Array(0, 2, 3 , 'iio') 
+
+           var arr = [1,10,3,20,5, 'khjkhj', 20, 30];
+            //elemento = 1, 2, 3, 4, 5
+            //indice = 0, 1, 2, 3, 4
+            //obj = [1, 2, 3, 4, 5]
+           var soNumeros = arr.every(function(el){
+                return typeof el === 'number';
+           }); //método every = se todos os elementos forem number (neste caso), retorna true, senão, false (retorna um booleano)
+           console.log(soNumeros);
+
+           var aoMenosUmNumero = arr.some(function(el){
+                return typeof el === 'number';
+           }); //pelo menos 1 objeto tem que ser true
+           console.log(aoMenosUmNumero);
+
+           var numeros = arr.filter(function(el, i, arr){
+               return typeof el === 'number';
+           });
+           console.log(numeros) //filtrou somente os numeros em uma nova array
+
+           arr.forEach(function(el, i, arr){
+               console.log('el=', el, '| i=', i, '| i - ', arr.toString()); //i = indice
+           })
+
+           var posicaoStr1 = arr.indexOf('khjkhj', 6); //posso colocar a partir de qual index quero procurar, neste caso, 6 (retorna -1 pq a string está neste index)
+           console.log('posicaoStr1', posicaoStr1);
+
+           var posicaoStr2 = arr.lastIndexOf(20, 2);
+           console.log('posicaoStr2', posicaoStr2);
+
+           console.log(numeros);
+           numeros = numeros.map(function(el, i , arr){
+                return el * i;
+           });
+
+           console.log(numeros);
+
+           var arr2 = arr.concat(numeros, 'ola', 'arr2', 100);
+           console.log(arr2); //junta tudo em uma unica array
+
+           var str = arr2.join(' --- ');
+           console.log(str); //transforma elementos da array em string
+
+           arr.push('novo', 'item');
+           console.log(arr); //acrescenta elemento no final da array
+
+           var ultimoItem = arr.pop();
+           console.log(ultimoItem);
+           console.log(arr); //deleta o último item da array e retorna para quem o chamou
+
+           var primeiroItem = arr.shift();
+           console.log(primeiroItem);
+           console.log(arr); //deleta o primeiro item da array
+
+           arr.unshift(true, false, '1');
+           console.log(arr); //acrescenta elemento no início da array
+
+           numeros.shift();
+           var somaDeArr = numeros.reduce(function(anterior, atual, i){
+               console.log('anterior', anterior, '| atual', atual, ' | i', i)
+                return anterior + atual + i + 10;
+           }); //pega um array e retorna 1 único valor
+           console.log(numeros);
+           console.log(somaDeArr);
+
+           var testeReduce = ['1', '2', '3', '4', '5'].reduceRight(function(i, a){
+               return i + a; //inicial + atual
+           }); //reduceRight conta a partir da direita
+           console.log(testeReduce);
+
+           var arr = [10,20,30];
+           arr.reverse()
+           console.log(arr); //inverte a array
+
+           console.log(arr2);
+           console.log(arr2.slice(2, 5)); //mostra do indice 2 ao indice 5 (neste caso)
+
+           var arr3 = arr2.splice(2, 3, 'limao', 'melao'); //incluir, tirar elemento, incluir no meio da array, altas coisas
+           //1º parametro - posição onde vai começar a transformar a array
+           //2º parametro - quantos elementos eu quero remover
+           //3º parametro - elementos que quero incluir na array
+           console.log(arr2);
+           console.log(arr3);
+
+        </script>
+
+    </body>
+</html>

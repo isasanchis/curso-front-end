@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+        <script>
+
+            (function(){
+                function calcularMedia(){
+
+                    var total = 0;
+                    var qtd = arguments.length; //retorna numero de elementos
+
+                    for(x=0; typeof arguments[x] === 'number'; x++){
+                        total = total + arguments[x];
+                    }
+
+                    return total / qtd;
+                }
+                var media1 = calcularMedia(2,3);
+                var media2 = calcularMedia(2, 3, 10, 6);
+
+                console.log('media 1: ', media1);
+                console.log('media 2: ', media2);
+            })()
+
+        </script>
+    </head>
+
+    <body>
+        <h1>Javascript</h1>
+    </body>
+</html>

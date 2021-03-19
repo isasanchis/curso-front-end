@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>seletores avançados</title>
+        <!--o title otimiza o SEO, very much important-->
+        <meta charset="utf-8">
+        <meta name="author" content="Isabella">
+        <meta name="exemplo de seletores" content="exemplo de seletores">
+        <meta name="keywords" content="html5, css3, tech">
+
+        <style>
+           div{
+               border: 2px solid red;
+               padding: 25px;
+               position: relative;
+               margin: 25px;
+           }
+           div:before{
+               content: "before :";
+               background: #ccc;
+           } /*para fins visuais*/
+           div:after{
+               content: "";
+               background: red;
+               width: 25px;
+               height: 25px;
+               display: inline-block;
+               position: absolute;
+               bottom: 0;
+               right: 0;
+           } /*para fins visuais*/
+        </style>
+
+    </head>
+    <body>
+
+        <div> texto principal da div</div>
+
+            <article>
+                <p>antes do titulo</p>
+                <h3>
+                    titulo
+                </h3>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+                <p>paragrafo <a href="#">apenas um link com <b>negrito</b></a></p>
+            </article>
+
+            <ul>
+                <li><a href="#">Link falso</a></li>
+                <li><a href="#">Link falso</a></li>
+                <li><a href="http://serfrontend.com" target="blank">Link externo</a></li>
+                <li><a href="http://serfrontend.com/qq.pdf" target="_blank">Link externo</a></li>
+                <li><a href="23_transition.html" title="veja exercicio anterior">Link interno</a></li>
+            </ul>
+    </body>
+</html>

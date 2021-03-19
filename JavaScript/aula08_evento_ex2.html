@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1>Javascript</h1>
+
+            <form action="#" method="POST"> <!--method post evita que as infos apareçam no http-->
+                <label for="txtUser">Usuário</label><input type="text" id="txtUser" name="user"><br>
+                <label for="txtPass">Senha</label>
+                <input type="password" id="txtPass" name="pass"><br>
+                <button type="submit" id="btn">Logar</button>
+            </form>
+
+        </div>
+
+        <script>
+
+            (function(){
+                'use strict';
+                var $form = document.querySelector('form');
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPass = document.getElementById('txtPass');
+                var $btn = document.getElementById('btn');
+
+                $form.addEventListener('submit', function(e){
+                    if(!$txtUser.value || !$txtPass.value){
+                        alert('Por favor, preencha todos os campos');
+                        e.preventDefault(); //previne que o evento padrão ocorra, neste caso, se estiver com campos em branco, o formulário não será enviado.
+                    } //explicando o if: se não tiver usuário ou senha, retorna o alert; isso ocorre pq uma string vazia sempre vai retornar false
+                })
+                //aqui, adicionamos a var formulário para que sempre que seja submetido o formulário ele apareça o erro. Nota: no HTML o button type deve SEMPRE ser submit, para que o usuário possa enviá-lo. E neste caso, criamos um evento para o FORMULÁRIO e não para o botão.
+            })()
+
+        </script>
+    </body>
+</html>

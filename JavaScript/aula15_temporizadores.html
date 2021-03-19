@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+        <script>
+
+            var n = 0;
+
+            function somaUm(){
+                console.log('n', n++);
+
+                if(n >= 10){
+                    clearInterval(intervalo)
+                }
+            }
+
+            var timeout = setTimeout(somaUm, 1000); //depois de 1 segundo, executa o código da função
+            alert(timeout);
+
+            var intervalo = setInterval(somaUm, 1000); //executa a cada 5seg.
+
+            console.log(intervalo);
+
+            var str = '';
+            var timeoutTeste = setTimeout(function(){
+
+                for(var i = 0; i < 100000, i++){
+                    str += "i: " + i + " -- ";
+                }
+
+            }, 3000); //nao da certo pq JS é SINGLE THREAD
+
+            
+        </script>
+        
+    </body>
+</html>

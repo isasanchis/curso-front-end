@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1>Javascript</h1>
+
+            <textarea id="msg" cols="50" rows="10" maxlength="10"></textarea>
+            
+            <div id="restaContainer" style="display: none">Restam <span id="resta"></span> caracteres</div>
+        </div>
+
+        <script>
+
+            (function(){
+                'use strict';
+
+                var $txtMsg = document.getElementById('msg');
+                var $restaContainer = document.getElementById('restaContainer');
+                var $resta = document.getElementById('resta');
+                //3 variaveis que representam o DOM
+                var maxima = $txtMsg.maxLength; //recupera atributo max length do textarea
+
+                function mostrarContainerResta(){
+                    $restaContainer.style.display = 'block'; //style retorna inline apenas
+                }
+                mostrarContainerResta()
+
+                mostrarCaracteresFaltantes(maxima);
+
+                $txtMsg.addEventListener('input', checkLength);
+                
+                function checkLength(e){
+                    var numeroLetrasDigitadas = this.value.length; //recupera numero de letras que ja digitei
+                    var caracteresRestantes = parseInt(maxima) - parseInt(numeroLetrasDigitadas); //cálculo matemático
+                    
+                    mostrarCaracteresFaltantes(caracteresRestantes);
+                }
+
+                function mostrarCaracteresFaltantes(n){
+                    $resta.textContent  = n;
+                }
+            }())
+
+        </script>
+    </body>
+</html>

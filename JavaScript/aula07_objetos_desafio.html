@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+        
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Javascript</h1>
+        </div>
+
+        <script>
+
+            var pessoa1 = {
+                nome: 'isabella',
+                sobrenome: 'sanchis'
+            }
+            var pessoa2 = {
+                nome: 'josé',
+                sobrenome: 'geraldo'
+            }
+            var pessoa3 = {
+                nome: 'maria',
+                sobrenome: 'Oliveira'
+            }
+
+            var pessoas = [
+                pessoa1,
+                pessoa2,
+                pessoa3
+            ]
+
+            var x=0;
+            while(pessoas[x]){
+                console.log(pessoas[x].nome + ' '+ pessoas[x].sobrenome);
+                x++;
+            }
+
+        </script>
+    </body>
+</html>
